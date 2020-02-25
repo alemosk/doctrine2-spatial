@@ -74,7 +74,7 @@ class GeometryWalkerTest extends OrmTestCase
 
         switch ($this->getPlatform()->getName()) {
             case 'mysql':
-                $asBinary   = 'AsBinary';
+                $asBinary   = 'ST_AsBinary';
                 $startPoint = 'StartPoint';
                 $envelope   = 'Envelope';
                 break;

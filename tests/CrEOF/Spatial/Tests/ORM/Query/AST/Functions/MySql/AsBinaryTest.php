@@ -74,7 +74,7 @@ class AsBinaryTest extends OrmTestCase
         $this->getEntityManager()->flush();
         $this->getEntityManager()->clear();
 
-        $query   = $this->getEntityManager()->createQuery('SELECT AsBinary(l.lineString) FROM CrEOF\Spatial\Tests\Fixtures\LineStringEntity l');
+        $query   = $this->getEntityManager()->createQuery('SELECT ST_AsBinary(l.lineString) FROM CrEOF\Spatial\Tests\Fixtures\LineStringEntity l');
         $result  = $query->getResult();
         $string1 = '010200000003000000000000000000000000000000000000000000000000000040000000000000004000000000000014400000000000001440';
         $string2 = '0102000000030000000000000000000840000000000000084000000000000010400000000000002e4000000000000014400000000000003640';

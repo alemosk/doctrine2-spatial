@@ -58,7 +58,7 @@ class MySql extends AbstractPlatform
      */
     public function convertToPHPValueSQL(AbstractSpatialType $type, $sqlExpr)
     {
-        return sprintf('AsBinary(%s)', $sqlExpr);
+        return sprintf('ST_AsBinary(%s)', $sqlExpr);
     }
 
     /**
